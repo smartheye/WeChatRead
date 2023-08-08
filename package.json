@@ -1,13 +1,37 @@
 {
   "name": "WeChatRead",
   "build": {
-    "productName": "微信读书"
+    "productName": "微信读书",
+    "appId": "com.github.smartheye.WeChatRead",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "icon.icns",
+      "target": [
+        "tar.gz",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "installerIcon": "icon.ico"
+    }
   },
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "微信读书",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -20,7 +44,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^8.0.2",
-    "electron-builder": "^22.3.2"
+    "electron": "^25.4.0",
+    "electron-builder": "^24.6.3"
   }
 }
